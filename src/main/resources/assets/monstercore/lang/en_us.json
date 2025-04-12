@@ -1,0 +1,14 @@
+{
+  "item.monstercore.raw_classcore": "Raw Class Core",
+  "item.monstercore.fclasscore": "F-Class Core",
+  "item.monstercore.eclasscore": "E-Class Core",
+  "item.monstercore.dclasscore": "D-Class Core",
+  "item.monstercore.cclasscore": "C-Class Core",
+  "item.monstercore.bclasscore": "B-Class Core",
+  "item.monstercore.aclasscore": "A-Class Core",
+  "item.monstercore.sclasscore": "S-Class Core",
+
+  "block.monstercore.nom_block": "block of nom",
+
+  "creativetab.monstercore.monstercore_tab": "Monster Core"
+}

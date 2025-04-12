@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "monstercore:cclasscore"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "monstercore:dclasscore"
+  },
+  "show_notification": false
+}
