@@ -18,6 +18,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.monstercore.monstercore_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RAW_CLASSCORE.get());
+                        output.accept(ModItems.RAW_CLASSCORE_SHARD.get());
                         output.accept(ModItems.FCLASSCORE.get());
                         output.accept(ModItems.ECLASSCORE.get());
                         output.accept(ModItems.DCLASSCORE.get());

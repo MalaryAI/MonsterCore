@@ -1,0 +1,15 @@
+All Rights Reserved
+
+Copyright (c) 2025 FTHY
+
+This mod and all its contents are the intellectual property of the author.
+No part of this mod may be copied, modified, redistributed, or included in a modpack
+without express written permission from the author.
+
+You are not allowed to:
+- Rehost this mod on other platforms
+- Include it in public or private modpacks
+- Modify and redistribute it
+without explicit permission.
+
+Contact https://www.curseforge.com/minecraft/mc-mods/monstercore to request permission.

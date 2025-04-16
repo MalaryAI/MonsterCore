@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "monstercore:fclasscore",
+    "monstercore:eclasscore",
+    "monstercore:dclasscore",
+    "monstercore:cclasscore",
+    "monstercore:bclasscore",
+    "monstercore:aclasscore",
+    "monstercore:sclasscore"
+  ]
+}

@@ -20,7 +20,7 @@ public class ModBlocks {
 
  /**   public static final RegistryObject<Block> NOM_BLOCK = registerBlock("nom_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)))//change le point par un nouveau point pour voir les choix possible
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));//change le point par un nouveau point pour voir les choix possible
 **/
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

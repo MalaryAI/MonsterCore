@@ -1,0 +1,34 @@
+{
+  "item.monstercore.raw_classcore": "Noyau de Classe Brut",
+  "item.monstercore.raw_classcore_shard": "Éclat du Noyau de Classe Brut",
+  "item.monstercore.fclasscore": "Noyau de Classe F",
+  "item.monstercore.eclasscore": "Noyau de Classe E",
+  "item.monstercore.dclasscore": "Noyau de Classe D",
+  "item.monstercore.cclasscore": "Noyau de Classe C",
+  "item.monstercore.bclasscore": "Noyau de Classe B",
+  "item.monstercore.aclasscore": "Noyau de Classe A",
+  "item.monstercore.sclasscore": "Noyau de Classe S",
+
+  "block.monstercore.nom_block": "Block de Nom",
+
+  "message.monstercore.rare_item": "Vous avez obtenu : %s",
+  "message.monstercore.legendary_item": "%s a obtenu un Noyau LÉGENDAIRE : %s",
+
+  "tooltip.monstercore.raw_classcore.tooltip":  "Clic Droit pour avoir un Noyau de Classe aléatoire",
+  "tooltip.monstercore.fclasscore.tooltip":  "Valeur : 1",
+  "tooltip.monstercore.eclasscore.tooltip":  "Valeur : 9",
+  "tooltip.monstercore.dclasscore.tooltip":  "Valeur : 81",
+  "tooltip.monstercore.cclasscore.tooltip":  "Valeur : 729",
+  "tooltip.monstercore.bclasscore.tooltip":  "Valeur : 6 561",
+  "tooltip.monstercore.aclasscore.tooltip":  "Valeur : 59 049",
+  "tooltip.monstercore.sclasscore.tooltip":  "Valeur : 531 441",
+
+  "creativetab.monstercore.monstercore_tab": "Noyau de Monstre",
+
+  "key.monstercore.toggle_message_screen": "Afficher menu des messages",
+  "menu.monstercore.config": "Configuration des messages",
+  "option.monstercore.rare_messages": "Messages de Drop Client",
+  "option.monstercore.legendary_messages": "Messages de Drop Rare Serveur",
+  "key.categories.monstercore": "Paramètres de MonsterCore",
+  "key.monstercore.toggle_config_gui": "Messages du Chat"
+}

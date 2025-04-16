@@ -10,17 +10,23 @@ import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static net.FTHY.monstercore.MonsterCore.MOD_ID;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
 public class GlobalDropHandler {
 
+    private static final Logger LOGGER = LogManager.getLogger();
+
     @SubscribeEvent
     public static void onMobDrop(LivingDropsEvent event) {
         Level level = event.getEntity().level();
+
+        // Vérifie que le monde n'est pas côté client
         if (!level.isClientSide()) {
-            // ⚠️ uniquement pour les mobs hostiles :
+            // Vérifie que l'entité est un mob hostile
             if (!(event.getEntity() instanceof Monster)) return;
 
             double chance = 0.4;
@@ -37,6 +43,9 @@ public class GlobalDropHandler {
                             dropStack
                     );
                     event.getDrops().add(drop);
+                    LOGGER.info("Dropped Raw ClassCore from a hostile mob.");
+                } else {
+                    LOGGER.error("Failed to find item: monstercore:raw_classcore");
                 }
             }
         }

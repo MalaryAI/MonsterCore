@@ -1,11 +1,12 @@
 package net.FTHY.monstercore;
 
-import com.mojang.logging.LogUtils;
 import net.FTHY.monstercore.block.ModBlocks;
+import net.FTHY.monstercore.config.ModCommonConfigs;
 import net.FTHY.monstercore.item.ModCreativeModTabs;
 import net.FTHY.monstercore.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.KeyMapping;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -17,16 +18,13 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
+import org.lwjgl.glfw.GLFW;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MonsterCore.MOD_ID)
 public class MonsterCore {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "monstercore";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
-
     public MonsterCore() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
@@ -40,11 +38,10 @@ public class MonsterCore {
 
         modEventBus.addListener(this::addCreative);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModCommonConfigs.SPEC, "monstercore-common.toml");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
     }
 
     // Add the example block item to the building blocks tab
@@ -71,11 +68,21 @@ public class MonsterCore {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = MonsterCore.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
+
+        public static KeyMapping OPEN_CONFIG_GUI;
+
         @SubscribeEvent
+        public static void registerKeyBindings(RegisterKeyMappingsEvent event) {
+            OPEN_CONFIG_GUI = new KeyMapping("key.monstercore.toggle_config_gui", GLFW.GLFW_KEY_M, "key.categories.monstercore");
+            event.register(OPEN_CONFIG_GUI);
+        }
+    }
+
+
+    @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
-        }
     }
 }

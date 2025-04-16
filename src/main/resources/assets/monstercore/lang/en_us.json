@@ -1,5 +1,6 @@
 {
   "item.monstercore.raw_classcore": "Raw Class Core",
+  "item.monstercore.raw_classcore_shard": "Raw Class Core Shard",
   "item.monstercore.fclasscore": "F-Class Core",
   "item.monstercore.eclasscore": "E-Class Core",
   "item.monstercore.dclasscore": "D-Class Core",
@@ -10,5 +11,24 @@
 
   "block.monstercore.nom_block": "block of nom",
 
-  "creativetab.monstercore.monstercore_tab": "Monster Core"
+  "message.monstercore.rare_item": "You obtained : %s",
+  "message.monstercore.legendary_item": "%s obtained a LEGENDARY Core: %s",
+
+  "tooltip.monstercore.raw_classcore.tooltip":  "Right Click to get a random Class Core",
+  "tooltip.monstercore.fclasscore.tooltip":  "Value : 1",
+  "tooltip.monstercore.eclasscore.tooltip":  "Value : 9",
+  "tooltip.monstercore.dclasscore.tooltip":  "Value : 81",
+  "tooltip.monstercore.cclasscore.tooltip":  "Value : 729",
+  "tooltip.monstercore.bclasscore.tooltip":  "Value : 6 561",
+  "tooltip.monstercore.aclasscore.tooltip":  "Value : 59 049",
+  "tooltip.monstercore.sclasscore.tooltip":  "Value : 531 441",
+
+  "creativetab.monstercore.monstercore_tab": "Monster Core",
+
+  "key.monstercore.toggle_message_screen": "Show message menu",
+  "menu.monstercore.config": "Message configuration",
+  "option.monstercore.rare_messages": "Client Drop messages",
+  "option.monstercore.legendary_messages": "Server Rare Drop Messages",
+  "key.categories.monstercore": "MonsterCore Settings",
+  "key.monstercore.toggle_config_gui": "Chat Messages"
 }
